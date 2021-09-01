@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/*y
+    background:linear-gradient(to right, rgb(112, 151, 167) , rgb(7, 7, 73))}*/
+    @import "~bootstrap/dist/css/bootstrap.css";
+    @import "~font-awesome/css/font-awesome.css";
+    .container{
+        margin-top:5%;
+      }
+      table .btn{
+        margin: 2px;
+      }
+      .border{
+        padding: 10px;
+      }
+      .btn{
+        margin-right: 10px;
+      }
+      .fa {
+        margin-right: 10px;
+      }
+      body {  background: linear-gradient(-225deg, rgb(60, 60, 143) 50%, rgba(12, 52, 80, 0.6) 80%); }
