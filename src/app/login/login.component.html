@@ -1,0 +1,44 @@
+    <div class="container">    
+        <div class="row">    
+            <div  class="col-md-4 mx-auto">    
+                <div class="card">    
+                    <div class="card-header" >    
+                        <h3>Login to your account</h3>    
+                    </div>    
+                    <div class="card-body">     
+                            <form class="form"  #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)" novalidate>
+                            <div class="form-group">    
+                                <label>Email</label>    
+                                <input type="text" class="form-control" [(ngModel)]="data.email" name="email"    
+                                    #email="ngModel" required email>    
+                                <span class="text-danger"    
+                                    *ngIf="(email.touched || userForm.submitted) && email.errors?.required">    
+                                    Email is required    
+                                </span>    
+                                <span class="text-danger" *ngIf="email.touched && email.errors?.email">    
+                                    Enter a valid email address    
+                                </span>    
+                            </div>    
+                            <div class="form-group">    
+                                <label>Password</label>    
+                                <input type="text" class="form-control" [(ngModel)]="data.password" name="password"    
+                                    #password="ngModel" appPasswordPattern required>    
+                                <span class="text-danger"    
+                                    *ngIf="(password.touched || userForm.submitted) && password.errors?.required">    
+                                    Password is required    
+                                </span>    
+                                <span class="text-danger" *ngIf="password.touched && password.errors?.invalidPassword">    
+                                    Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase    
+                                    letter and 1 number    
+                                </span>    
+                            </div> 
+                        </form>   
+                           <br>
+                          
+                            <div class="center"> <a [routerLink]="['/friends']">
+                               <button [disabled]="userForm.invalid" type="submit" class="btn btn-success" >Continue</button></a></div>
+                    </div>    
+                </div>    
+            </div>    
+        </div>    
+    </div>    

@@ -1,0 +1,76 @@
+.topnav {
+    overflow: hidden;
+    background-color: navy;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color:navy;
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color:navy;
+    color:rgb(238, 238, 241)
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    color: rgb(10, 10, 10);
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: navy;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: navy
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid white;  
+    }
+  }
+  .md-fab-bottom-right{
+    position: fixed !important;
+    right: 25px; /* Add this and change value to set the margin you want */
+    bottom:10px;
+    background-color: navy;
+    color: oldlace;
+}
+  
